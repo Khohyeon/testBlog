@@ -13,7 +13,7 @@ public class UserContoroller {
 
     @GetMapping("/logout")
     public String logout() {
-        session.invalidate();
+        // session.invalidate();
         return "redirect:/loginForm";
     }
 
@@ -30,5 +30,10 @@ public class UserContoroller {
     @GetMapping("user/updateForm")
     public String updateForm() {
         return "/user/updateForm";
+    }
+
+    @GetMapping("user/profileUpdate")
+    public String profileupdate() {
+        return "/user/profileUpdate";
     }
 }
